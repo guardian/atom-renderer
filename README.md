@@ -1,4 +1,6 @@
-# Atom Renderer
+# Atom Renderer (DEPRECATED)
+
+*Please note that this library has now been deprecated and is no longer maintained. You can of course continue to use any previously published versions but it is no longer receiving updates or bug fixes.*
 
 A library that renders atoms from the content API into front-end code. It is written in
 javascript using type-checking from FlowJS, and wrapped in a Scala app. 
