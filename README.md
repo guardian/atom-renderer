@@ -1,6 +1,6 @@
 # Atom Renderer (DEPRECATED)
 
-*Please note that this library has now been deprecated and is no longer maintained. You can of course continue to use any previously published versions but it is no longer receiving updates or bug fixes.*
+*Please note that this library has now been deprecated and is no longer maintained. You can of course continue to use any previously published versions but it is no longer receiving updates or bug fixes. You may want to look into using https://github.com/guardian/csnx/tree/main/libs/@guardian/atoms-rendering instead (note thats `atoms-rendering` vs `atom-renderer` in this legacy library)*
 
 A library that renders atoms from the content API into front-end code. It is written in
 javascript using type-checking from FlowJS, and wrapped in a Scala app. 
