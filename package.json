@@ -48,7 +48,7 @@
     "flow": "flow",
     "lint": "eslint --ext .fjs core/src/main/resources",
     "copy": "node ./tools/copy.js",
-    "postcss": "postcss build/*/*/*.css -u autoprefixer",
+    "postcss": "postcss build/*/*/*.css -u autoprefixer --replace",
     "apps": "yarn run appsJS; yarn run appsCSS; yarn run appsEmailCSS",
     "appsJS": "NODE_ENV=production webpack --config apps.config.js",
     "appsCSS": "node-sass --output-style compressed --include-path node_modules/sass-mq --include-path core/src/main/resources/css --output build/ core/src/main/resources/; postcss build/*/*/*.css -u autoprefixer --dir build/",
