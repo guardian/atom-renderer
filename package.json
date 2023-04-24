@@ -1,6 +1,6 @@
 {
   "name": "@guardian/atom-renderer",
-  "version": "2.0.0-ravi.test.2",
+  "version": "2.0.0-ravi.test.3",
   "description": "Platform-agnostic rendering library for atoms",
   "repository": "https://github.com/guardian/atom-renderer.git",
   "author": "Regis Kuckaertz <regis.kuckaertz@theguardian.com>",
