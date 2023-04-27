@@ -11,18 +11,22 @@ module.exports = ({ cssVarsPath }) => [
       {
         loader: 'postcss-loader',
         options: {
-          ident: 'postcss',
-          plugins: () => [
-            require('postcss-import')(),
-            require('autoprefixer')(),
-            require('postcss-css-variables')()
-          ]
+          postcssOptions: {
+            ident: 'postcss',
+            plugins: [
+              require('postcss-import')(),
+              require('autoprefixer')(),
+              require('postcss-css-variables')()
+            ]
+          }
         }
       },
       {
         loader: 'sass-loader',
         options: {
-          prependData: `@import '${cssVarsPath}';`
+          sassOptions: {
+            prependData: `@import '${cssVarsPath}';`
+          }
         }
       }
     ]
