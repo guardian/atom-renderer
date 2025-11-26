@@ -12,7 +12,6 @@ import com.gu.contentatom.thrift.atom.media.MediaAtom
 import com.gu.contentatom.thrift.atom.profile.ProfileAtom
 import com.gu.contentatom.thrift.atom.qanda.QAndAAtom
 import com.gu.contentatom.thrift.atom.quiz.QuizAtom
-import com.gu.contentatom.thrift.atom.recipe.RecipeAtom
 import com.gu.contentatom.thrift.atom.review.ReviewAtom
 import com.gu.contentatom.thrift.atom.timeline.TimelineAtom
 import com.gu.contentatom.thrift.atom.audio.AudioAtom
@@ -60,10 +59,6 @@ object DefaultRenderings extends Renderings {
 
   val quizRendering = new DefaultRendering[QuizAtom] {
     val html_impl = (atom, data) => quiz.default.html.index(atom, data)
-  }
-
-  val recipeRendering = new DefaultRendering[RecipeAtom] {
-    val html_impl = (atom, data) => recipe.default.html.index(atom, data)
   }
 
   val reviewRendering = new DefaultRendering[ReviewAtom] {

@@ -10,7 +10,6 @@ import com.gu.contentatom.thrift.atom.media.MediaAtom
 import com.gu.contentatom.thrift.atom.profile.ProfileAtom
 import com.gu.contentatom.thrift.atom.qanda.QAndAAtom
 import com.gu.contentatom.thrift.atom.quiz.QuizAtom
-import com.gu.contentatom.thrift.atom.recipe.RecipeAtom
 import com.gu.contentatom.thrift.atom.review.ReviewAtom
 import com.gu.contentatom.thrift.atom.timeline.TimelineAtom
 import com.gu.contentatom.thrift.atom.chart.ChartAtom
@@ -25,7 +24,6 @@ trait Renderings {
   implicit val profileRendering: Rendering[ProfileAtom]
   implicit val qandaRendering: Rendering[QAndAAtom]
   implicit val quizRendering: Rendering[QuizAtom]
-  implicit val recipeRendering: Rendering[RecipeAtom]
   implicit val reviewRendering: Rendering[ReviewAtom]
   implicit val timelineRendering: Rendering[TimelineAtom]
   implicit val commonsdivisionRendering: Rendering[CommonsDivision]

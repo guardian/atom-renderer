@@ -12,7 +12,6 @@ import com.gu.contentatom.thrift.atom.media.MediaAtom
 import com.gu.contentatom.thrift.atom.profile.ProfileAtom
 import com.gu.contentatom.thrift.atom.qanda.QAndAAtom
 import com.gu.contentatom.thrift.atom.quiz.QuizAtom
-import com.gu.contentatom.thrift.atom.recipe.RecipeAtom
 import com.gu.contentatom.thrift.atom.review.ReviewAtom
 import com.gu.contentatom.thrift.atom.timeline.TimelineAtom
 import com.gu.contentatom.thrift.atom.audio.AudioAtom
@@ -76,12 +75,6 @@ object EmailRenderings extends Renderings {
     def html[C <: Conf](atom: Atom, data: QuizAtom)(implicit conf: C) =
       quiz.email.html.index(atom, data)
     val css_impl = () => LoadFromClasspath("/quiz/email/index.css")
-  }
-
-  val recipeRendering = new EmailRendering[RecipeAtom] {
-    def html[C <: Conf](atom: Atom, data: RecipeAtom)(implicit conf: C) =
-      recipe.email.html.index(atom, data)
-    val css_impl = () => LoadFromClasspath("/recipe/email/index.css")
   }
 
   val reviewRendering = new EmailRendering[ReviewAtom] {

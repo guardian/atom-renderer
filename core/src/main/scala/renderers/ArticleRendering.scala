@@ -11,7 +11,6 @@ import com.gu.contentatom.thrift.atom.media.MediaAtom
 import com.gu.contentatom.thrift.atom.profile.ProfileAtom
 import com.gu.contentatom.thrift.atom.qanda.QAndAAtom
 import com.gu.contentatom.thrift.atom.quiz.QuizAtom
-import com.gu.contentatom.thrift.atom.recipe.RecipeAtom
 import com.gu.contentatom.thrift.atom.review.ReviewAtom
 import com.gu.contentatom.thrift.atom.timeline.TimelineAtom
 import com.gu.contentatom.thrift.atom.chart.ChartAtom
@@ -85,13 +84,6 @@ object ArticleRenderings extends Renderings {
       quiz.article.html.index(atom, data)
     val css_impl = () => LoadFromClasspath("/quiz/article/index.css")
     val js_impl = () => LoadFromClasspath("/quiz/article/index.js")
-  }
-
-  val recipeRendering = new ArticleRendering[RecipeAtom] {
-    def html[C <: Conf](atom: Atom, data: RecipeAtom)(implicit conf: C) = 
-      recipe.article.html.index(atom, data)
-    val css_impl = () => LoadFromClasspath("/recipe/article/index.css")
-    val js_impl = () => LoadFromClasspath("/recipe/article/index.js")
   }
 
   val reviewRendering = new ArticleRendering[ReviewAtom] {
